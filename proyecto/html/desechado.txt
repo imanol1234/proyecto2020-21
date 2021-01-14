@@ -1,0 +1,33 @@
+ <!-- <h3 class="titulo">NOVEDADES</h3>
+  <div class="centro">
+    <div class="card">
+      <a href="sales/valhalla.html"><img class="card-img-top" src="../images/valhalla.jpg" alt="image"
+          style="width:100%"></a>
+      <a href="sales/valhalla.html" class="btn btn-primary">59.99€</a>
+    </div>
+    <div class="card">
+      <a href="sales/cyberpunk.html"><img class="card-img-top" src="../images/cyberpunk.jpg" alt="image"
+          style="width:100%"></a>
+      <a href="sales/cyberpunk.html" class="btn btn-primary">44.99€</a>
+    </div>
+    <div class="card">
+      <a href="sales/cod.html"><img class="card-img-top" src="../images/cod.jpg" alt="image" style="width:100%"></a>
+      <a href="sales/cod.html" class="btn btn-primary">39.99€</a>
+    </div>
+  </div> -->
+---
+/* .card {
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px -5px rgba(0,0,0,0.6);
+  // cursor: pointer;
+  display: inline-block;
+  height: 250px;
+  overflow: hidden;
+  perspective: 1200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translatez(35px);
+  transition: transform 200ms ease-out;
+  width: 175px;
+  text-align: center;
+   */
