@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../imagenes/icono.png" type="image/png" />
   <link rel="stylesheet" href="../css/paralax.css">
-  <link rel="stylesheet" href="../css/profile.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -16,131 +15,92 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
   </script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <form action="../php/login.php" method="post"></form>
-  <form action="../php/resgitration.php" method="post"></form>
-  <form action="../php/config.php" method="post"></form>
-  <script src="../js/scripts.js"></script>
-  <script src="../js/profile.js"></script>
-  <div class="jumbotron text-center grad" style="margin-bottom:0">
-    <h1>Ágora</h1>
-    <p>La web donde comprar tus juegos de forma barata y segura</p>
+  <form action ="../php/login.php" method="post"></form>
+  <form action ="../php/resgitration.php" method="post"></form>
+  <form action ="../php/config.php" method="post"></form>
+  <script src="script.js"></script>
+<div class="jumbotron text-center grad" style="margin-bottom:0">
+  <h1>Ágora</h1>
+  <p>La web donde comprar tus juegos de forma barata y segura</p>
+</div>
+
+<!--menú-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html">menú</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="sales.html">ofertas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="support.html">soporte</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="shop.html">carrito</a>
+      </li>
+    </ul>
   </div>
-
-  <!--menú-->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="index.html">menú</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="sales.html">ofertas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="support.html">soporte</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="shop.html">carrito</a>
-        </li>
-      </ul>
+</nav>
+<br />
+<div class="profile">
+  <form method="post" action="#" name="signin-form">
+    <div class="form-element">
+      <label>nombre de usuario</label>
+      <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
     </div>
-  </nav>
-  <br />
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 mx-auto">
-        <div id="first">
-          <div class="myform form ">
-            <div class="logo mb-3">
-              <div class="col-md-12 text-center">
-                <h1>acceso</h1>
-              </div>
-            </div>
-            <form action="" method="post" name="login">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Correo electrónico</label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
-                  placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Contraseña</label>
-                <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp"
-                  placeholder="Enter Password">
-              </div>
-              <div class="form-group">
-                <p class="text-center">Al acceder a tu cuenta estas de acuerdo con nuestro <a href="#">Terminos de usuario</a></p>
-              </div>
-              <div class="col-md-12 text-center ">
-                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
-              </div>
-              <div class="col-md-12 ">
-                <div class="login-or">
-                  <hr class="hr-or">
-                  <span class="span-or">o</span>
-                </div>
-              </div>
-              <div class="col-md-12 mb-3">
-                <p class="text-center">
-                  <a href="javascript:void();" class="google btn mybtn"><i class="fa fa-google-plus">
-                    </i> Registrate usando Google
-                  </a>
-                </p>
-              </div>
-              <div class="form-group">
-                <p class="text-center">¿No tienes una cuenta?<a href="#" id="signup">Registrate aquí</a></p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div class="form-element">
+      <label>contraseña</label>
+      <input type="password" name="password" required />
+    </div>
+    <button class="btn btn-primary" type="submit" name="login" value="login">Log In</button>
+    <button class="btn btn-primary" type="submit" name="login" ><a herf:register.html>register</a></button>
+  </form>
+</div>
+
+ <!--pie-->
+ <footer class="jumbotron foot">
+  <div class="row ">
+    <div class="col-sm ">
+      <strong>Copyright © Todos los derechos reservados
+        Derechos de autor
+        Todos los contenidos de este Sitio (Incluyendo, pero no limitado a, texto, logotipos, contenido, fotografías,
+        audio,
+        botones, nombres comerciales y vídeo) están sujetos a derechos de propiedad por las leyes de Derechos de Autor
+        y demás
+        Leyes relativas Internacionales a Androidphoria y de terceros titulares de los mismos que han autorizado
+        debidamente
+        su inclusión.
+
+        En ningún caso se entenderá que se concede licencia alguna o se efectúa renuncia, transmisión, cesión total o
+        parcial
+        de dichos derechos ni se confiere ningún derecho, y en especial, de alteración, explotación, reproducción,
+        distribución o comunicación publica sobre dichos contenido sin la previa autorización expresa de Androidphoria
+        o de
+        los titulares correspondientes.
+
+        El uso de imágenes, fragmentos de videos y demás material que sea objeto de protección de los derechos de
+        autor, será
+        exclusivamente para fines educativos e informativos, y cualquier uso distinto como el lucro, reproducción,
+        edición o
+        modificación, será perseguido y sancionado por el respectivo titular de los Derechos de Autor.
+
+        Derechos de uso
+        Queda prohibido copiar, reproducir, distribuir, publicar, transmitir, difundir, o en cualquier modo explotar
+        cualquier
+        parte de este servicio sin la autorización previa por escrito de Androidphoria o de los titulares
+        correspondientes.
+        Sin embargo, usted podrá bajar material a su computadora personal para uso exclusivamente personal o
+        educacional y no
+        comercial limitado a una copia por página. Usted no podrá remover o alterar de la copia ninguna leyenda de
+        Derechos de
+        Autor o la que manifieste la autoría del material.</strong>
     </div>
   </div>
+</footer>
 
-  <!--pie-->
-  <footer class="jumbotron foot">
-    <div class="row ">
-      <div class="col-sm ">
-        <strong>Copyright © Todos los derechos reservados
-          Derechos de autor
-          Todos los contenidos de este Sitio (Incluyendo, pero no limitado a, texto, logotipos, contenido, fotografías,
-          audio,
-          botones, nombres comerciales y vídeo) están sujetos a derechos de propiedad por las leyes de Derechos de Autor
-          y demás
-          Leyes relativas Internacionales a Androidphoria y de terceros titulares de los mismos que han autorizado
-          debidamente
-          su inclusión.
-
-          En ningún caso se entenderá que se concede licencia alguna o se efectúa renuncia, transmisión, cesión total o
-          parcial
-          de dichos derechos ni se confiere ningún derecho, y en especial, de alteración, explotación, reproducción,
-          distribución o comunicación publica sobre dichos contenido sin la previa autorización expresa de Androidphoria
-          o de
-          los titulares correspondientes.
-
-          El uso de imágenes, fragmentos de videos y demás material que sea objeto de protección de los derechos de
-          autor, será
-          exclusivamente para fines educativos e informativos, y cualquier uso distinto como el lucro, reproducción,
-          edición o
-          modificación, será perseguido y sancionado por el respectivo titular de los Derechos de Autor.
-
-          Derechos de uso
-          Queda prohibido copiar, reproducir, distribuir, publicar, transmitir, difundir, o en cualquier modo explotar
-          cualquier
-          parte de este servicio sin la autorización previa por escrito de Androidphoria o de los titulares
-          correspondientes.
-          Sin embargo, usted podrá bajar material a su computadora personal para uso exclusivamente personal o
-          educacional y no
-          comercial limitado a una copia por página. Usted no podrá remover o alterar de la copia ninguna leyenda de
-          Derechos de
-          Autor o la que manifieste la autoría del material.</strong>
-      </div>
-    </div>
-  </footer>
-
-  </body>
+</body>
 
 </html>
