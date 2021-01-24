@@ -31,3 +31,118 @@
   width: 175px;
   text-align: center;
    */
+
+
+
+
+   <div class="profile">
+  <form method="post" action="#" name="signin-form">
+    <div class="form-element">
+      <label>nombre de usuario</label>
+      <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+    </div>
+    <div class="form-element">
+      <label>contraseña</label>
+      <input type="password" name="password" required />
+    </div>
+    <button class="btn btn-primary" type="submit" name="login" value="login">Log In</button>
+    <button class="btn btn-primary" type="submit" name="login" ><a herf:register.html>register</a></button>
+  </form>
+</div>
+
+
+
+
+
+
+
+function inicializarFirebase(){
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    var firebaseConfig = {
+        apiKey: "AIzaSyAThC3zzY945dOZTF1WnlUVmNl8lh1Qif0",
+        authDomain: "proyecto-65e57.firebaseapp.com",
+        databaseURL: "https://proyecto-65e57-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "proyecto-65e57",
+        storageBucket: "proyecto-65e57.appspot.com",
+        messagingSenderId: "98857744193",
+        appId: "1:98857744193:web:29cff7d8e9d696da1253c0",
+        measurementId: "G-1S4VZV6G5D"
+      };
+    
+}
+
+
+
+
+window.onload = inicializar;
+var formulario;
+
+function inicializar(){
+    formulario = document.getElementById("formulario");
+    formulario.addEventListener("submit", enviarDatosAFirebase, false)
+}
+
+function enviarDatosAFirebase(){
+    alert("hola");
+}
+
+
+
+window.onload = inicializar;
+var formulario;
+var refMensajes;
+var fondoMensajes;
+
+function inicializar(){
+    formulario = document.getElementById("formulario");
+    formulario.addEventListener("submit", enviarDatosAFirebase, false)
+
+    fondoMensajes = document.getElementById("fondo-mensajes");
+
+    inicializarFirebase();
+
+    mostrarMensajesDeFirebase();
+}
+function mostrarMensajesDeFirebase(){
+    refMensajes = firebase.database().ref().child("mensajes");
+   
+    refMensajes.on("value", function(snap){
+        var todosLosMensajes = "";
+        datos = snap.val();
+        for(var key in datos){
+            todosLosMensajes += "</br><strong>" + datos[key].nombre + " : </strong> " + datos[key].mensaje;
+            
+        }
+        fondoMensajes.innerHTML = todosLosMensajes;
+    })
+
+}
+
+function enviarDatosAFirebase(event){
+    event.preventDefault();
+
+
+    refMensajes.push({ mensaje: event.target.mensaje.value, nombre: event.target.nombre.value});
+
+    formulario.reset
+}
+
+function inicializarFirebase(){
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyAThC3zzY945dOZTF1WnlUVmNl8lh1Qif0",
+    authDomain: "proyecto-65e57.firebaseapp.com",
+    databaseURL: "https://proyecto-65e57-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "proyecto-65e57",
+    storageBucket: "proyecto-65e57.appspot.com",
+    messagingSenderId: "98857744193",
+    appId: "1:98857744193:web:29cff7d8e9d696da1253c0",
+    measurementId: "G-1S4VZV6G5D"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+}
