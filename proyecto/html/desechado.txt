@@ -146,3 +146,48 @@ function inicializarFirebase(){
   firebase.analytics();
 
 }
+
+
+ml-auto/mr-auto 
+
+
+
+firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((user) => {
+    // Signed in
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });ç
+
+
+
+
+
+
+    <!--  </nav>
+  <br />
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Inicio</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="a">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="sign-in">Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="sign-up">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="sign-out">Cerrar sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

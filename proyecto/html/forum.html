@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<!--cabecera-->
 
 <head>
   <title>Ágora</title>
@@ -33,20 +32,21 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
+
 <!--mis archivos-->
 <link rel="icon" href="../imagenes/icono.png" type="image/png" />
 <link rel="stylesheet" href="../css/style.css">
 <script src="../js/scripts.js"></script>
 <script src="../js/chat.js"></script>
-<script src="../js/auth.js"></script>
-
+<!-- <script src="../js/auth.js"></script> -->
 </head>
 
 <body>
-  <div class="jumbotron text-center grad" style="margin-bottom:0">
-    <h1>Ágora</h1>
-    <p>La web donde comprar tus juegos de forma barata y segura</p>
-  </div>
+  <!--cabezera-->
+  <h1>Ágora</h1>
+  <p>La web donde comprar tus juegos de forma barata y segura</p>
+  <!---->
+
   <!--menú-->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <a class="navbar-brand" href="index.html">menú</a>
@@ -87,115 +87,36 @@
     </div>
   </nav>
   <br />
+  <!---->
+
+
+
+  <!--foros-->
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 mb-3">
-        <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
+    <div class="col-sm-4">
+      <form id="formulario">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input class="form-control" type="text" name="nombre" value="" id="nombre">
+        </div>
+        <div class="form-group">
+          <label for="mensaje"><b>Mensaje</b></label>
+          <textarea class="form-control" name="mensaje" rows="8" cols="80" id="mensaje"></textarea>
+        </div>
+        <input type="submit" name="mensaje" value="Enviar Mensaje">
+      </form>
+    </div>
+    <div class="col-sm-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">Foro</div>
+        <div class="panel-body" id="fondo-mensajes"></div>
       </div>
     </div>
   </div>
-  <br />
-  <div id="myItems">
-    <div class="centro row">
-      <div class="card cards">
-        <a href="sales/valhalla.html"><img class="card-img-top" src="../images/valhalla.jpg" alt="image"></a>
-        <a href="sales/valhalla.html" class="btn btn-primary card-title"><span class="badge badge-secondary">New</span>Assassin´s Creed: valhalla</a>
-        <a href="shop.html" class="btn btn-primary card-title">53.99€</a>
-      </div>
-      <div class="card cards">
-        <a href="sales/cyberpunk.html"><img class="card-img-top" src="../images/cyberpunk.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/cyberpunk.html" class="btn btn-primary card-title"><span class="badge badge-secondary">New</span>Cyberpunk 2077</a>
-        <a href="shop.html" class="btn btn-primary card-title">54.99€</a>
-      </div>
-      <div class="card cards">
-        <a href="sales/cod.html"><img class="card-img-top" src="../images/cod.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/cod.html" class="btn btn-primary card-title"><span class="badge badge-secondary">New</span>Call Of Duty: Black Ops Cold War</a>
-        <a href="shop.html" class="btn btn-primary card-title">59.99€</a>
-      </div>
-    </div>
-    <div class="centro row">
-      <div class="card cards">
-        <a href="sales/hope.html"><img class="card-img-top" src="../images/hope.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/hope.html" class="btn btn-primary card-title">Dark Pictures: Litle Hope</a>
-        <a href="shop.html" class="btn btn-primary card-title">25.99€</a>
-      </div>
-      <div class="card cards">
-        <a href="sales/light.html"><img class="card-img-top" src="../images/light.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/light.html" class="btn btn-primary card-title">Dying light</a>
-        <a href="shop.html" class="btn btn-primary card-title"><del>15.00€</del><p>5.00€</p></a>
-      </div>
-      <div class="card cards">
-        <a href="sales/fallout.html"><img class="card-img-top" src="../images/fallout.png" alt="image"
-            style="width:100%"></a>
-        <a href="sales/fallout.html" class="btn btn-primary card-title">Fallout 4</a>
-        <a href="shop.html" class="btn btn-primary card-title"><del>14.99€</del><p>7.99€</p></a>
-      </div>
-    </div>
-    <div class="centro row">
-      <div class="card cards">
-        <a href="sales/doom.html"><img class="card-img-top" src="../images/doom.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/doom.html" class="btn btn-primary card-title">Doom Eternal</a>
-        <a href="shop.html" class="btn btn-primary card-title">36.99€</a>
-      </div>
-      <div class="card cards">
-        <a href="sales/borderlands.html"><img class="card-img-top" src="../images/borderlands.jpeg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/borderlands.html" class="btn btn-primary card-title">Borderlands 3</a>
-        <a href="shop.html" class="btn btn-primary card-title">34.99€</a>
-      </div>
-      <div class="card cards">
-        <a href="sales/sekiro.html"><img class="card-img-top" src="../images/sekiro.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/sekiro.html" class="btn btn-primary card-title">Sekiro Shadow Die Twice</a>
-        <a href="shop.html" class="btn btn-primary card-title">32.99€</a>
-      </div>
-    </div>
-    <div class="centro row">
-      <div class="card cards">
-        <a href="sales/skyrim.html"><img class="card-img-top" src="../images/skyrim.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/skyrim.html" class="btn btn-primary card-title">The Elder Scrolls V skyrim</a>
-        <a href="shop.html" class="btn btn-primary card-title">11.11€</a>
-      </div>
-      <div class="card cards">
-        <a href="sales/evil.html"><img class="card-img-top" src="../images/evil.jpeg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/evil.html" class="btn btn-primary card-title">Resident Evil 3</a>
-        <a href="shop.html" class="btn btn-primary card-title"><del>44.99€</del><p>34.99€</p></a>
-      </div>
-      <div class="card cards">
-        <a href="sales/lis.html"><img class="card-img-top" src="../images/lis.jpg" alt="image"
-            style="width:100%"></a>
-        <a href="sales/lis.html" class="btn btn-primary card-title">Life Is Strange</a>
-        <a href="shop.html" class="btn btn-primary card-title">5.99€</a>
-      </div>
-    </div>
-  </div>
-  <br />
-  <script>
-    function myFunction() {
-      var input, filter, cards, cardContainer, a, title, i;
-      input = document.getElementById("myFilter");
-      filter = input.value.toUpperCase();
-      cardContainer = document.getElementById("myItems");
-      cards = cardContainer.getElementsByClassName("card");
-      for (i = 0; i < cards.length; i++) {
-        title = cards[i].querySelector("a.card-title");
-        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-          cards[i].style.display = "";
-        } else {
-          cards[i].style.display = "none";
-        }
-      }
-    }
-  </script>
-   <!--pie-->
-   <footer class="jumbotron foot">
+  <!---->
+
+  <!--pie-->
+  <footer class="jumbotron foot">
     <div class="row ">
       <div class="col-sm ">
         <strong>Copyright © Todos los derechos reservados
