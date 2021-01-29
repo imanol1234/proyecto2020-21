@@ -9,7 +9,7 @@ function inicializar() {
 
     fondoMensajes = document.getElementById("fondo-mensajes");
 
-    inicializarFirebase();
+
 
     mostrarMensajesDeFirebase();
 }

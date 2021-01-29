@@ -1,4 +1,4 @@
-<script>
+
 function myFunction() {
   var input, filter, cards, cardContainer, a, title, i;
   input = document.getElementById("myFilter");
@@ -14,4 +14,4 @@ function myFunction() {
     }
   }
 }
-</script>
+
