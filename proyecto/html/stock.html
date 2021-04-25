@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--cabecera-->
+
+<head>
+    <title>Agora</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/paralax.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.4.2/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCzIDTvb81eReFOHOvBWE5JLNB8wBu4h9k",
+            authDomain: "stock-49e5c.firebaseapp.com",
+            databaseURL: "https://stock-49e5c-default-rtdb.firebaseio.com",
+            projectId: "stock-49e5c",
+            storageBucket: "stock-49e5c.appspot.com",
+            messagingSenderId: "125216688976",
+            appId: "1:125216688976:web:5b12edbfa01a69392aba55",
+            measurementId: "G-F178SNE9MT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <!--mis archivos-->
+    <link rel="icon" href="../imagenes/icono.png" type="image/png" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/stock.js"></script>
+</head>
+
+<body>
+    <div>
+        <img class="banner" src="../images/agora2.jpg" alt="banner">
+    </div>
+    <!--menú-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <a class="navbar-brand" href="index.html">menú</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="sales.html">ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="support.html">soporte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forum.html">foros</a>
+                </li>
+            </ul>
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="sign-in">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html" id="sign-up">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="sign-out">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th colspan="1">Stock de productos</th>
+                            <th></th>
+                            <th></th>
+                        <tr>
+                            <th>juego</th>
+                            <th>stock</th>
+                            <th>en camino</th>
+                            <th>reservados</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-productos">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-4">
+                <form id="form-stock">
+                    <div class="form-group">
+                        <label for="juego">juego</label>
+                    </br>
+                        <input type="text" class="form-comtrol" name="juego" value="" id="juego">
+
+                    </div>
+                    <div clas="form-group">
+                        <label for="stock">stock</label>
+                    </br>
+                        <input type="number" class="form-comtrol" name="stock" value="" id="stock">
+                    </div>
+                    <div class="form-group">
+                        <label for="pedidos">pedidos</label>
+                    </br>
+                        <input type="number" class="form-comtrol" name="pedidos" value="" id="pedidos">
+                    </div>
+                    <div class="form-group">
+                        <label for="reservas">reservados</label>
+                    </br>
+                        <input type="number" class="form-comtrol" name="reservados" value="" id="reservas">
+                    </div>
+                    <input type="submit" name="" value="actualizar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--pie-->
+    <footer class="jumbotron foot">
+        <div class="row ">
+            <div class="col-sm ">
+                <strong>Copyright © Todos los derechos reservados
+                    Derechos de autor
+                    Todos los contenidos de este Sitio (Incluyendo, pero no limitado a, texto, logotipos, contenido,
+                    fotografías,
+                    audio,
+                    botones, nombres comerciales y vídeo) están sujetos a derechos de propiedad por las leyes de
+                    Derechos de Autor
+                    y demás
+                    Leyes relativas Internacionales a Androidphoria y de terceros titulares de los mismos que han
+                    autorizado
+                    debidamente
+                    su inclusión.
+
+                    En ningún caso se entenderá que se concede licencia alguna o se efectúa renuncia, transmisión,
+                    cesión total o
+                    parcial
+                    de dichos derechos ni se confiere ningún derecho, y en especial, de alteración, explotación,
+                    reproducción,
+                    distribución o comunicación publica sobre dichos contenido sin la previa autorización expresa de
+                    Androidphoria
+                    o de
+                    los titulares correspondientes.
+
+                    El uso de imágenes, fragmentos de videos y demás material que sea objeto de protección de los
+                    derechos de
+                    autor, será
+                    exclusivamente para fines educativos e informativos, y cualquier uso distinto como el lucro,
+                    reproducción,
+                    edición o
+                    modificación, será perseguido y sancionado por el respectivo titular de los Derechos de Autor.
+
+                    Derechos de uso
+                    Queda prohibido copiar, reproducir, distribuir, publicar, transmitir, difundir, o en cualquier modo
+                    explotar
+                    cualquier
+                    parte de este servicio sin la autorización previa por escrito de Androidphoria o de los titulares
+                    correspondientes.
+                    Sin embargo, usted podrá bajar material a su computadora personal para uso exclusivamente personal o
+                    educacional y no
+                    comercial limitado a una copia por página. Usted no podrá remover o alterar de la copia ninguna
+                    leyenda de
+                    Derechos de
+                    Autor o la que manifieste la autoría del material.</strong>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

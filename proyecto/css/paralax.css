@@ -46,7 +46,7 @@ h3 {
   text-align: center;
 }
 
-:hover {
+.cards:hover {
   box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.5);
   transform: translatez(60px);
 }
